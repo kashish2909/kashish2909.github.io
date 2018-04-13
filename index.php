@@ -427,7 +427,7 @@
             </div>
         </div>
         <!--.row-->
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-12">
                 <div class="feedback-form">
                     <h2>Get in touch</h2>
@@ -454,14 +454,14 @@
                                       placeholder="Write message"></textarea>
                         </div>
 
-                        <input type="submit" class="btn btn-primary">Submit</input>
+                        <input type="submit" class="btn btn-primary"></input>
                     </form>
                 </div>
-                <!-- .feedback-form -->
+                
 
 
             </div>
-        </div>
+        </div> -->
     </div>
     <!--.container-fluid-->
 </section>
