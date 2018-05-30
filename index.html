@@ -27,6 +27,20 @@
         window.sr = ScrollReveal({reset:true});
         sr.reveal('.Reveal',{duration:2000});
       </script>
+
+      <style>
+      .goto-top{
+        position:fixed;
+    bottom:2em;
+    right:2em;
+    text-decoration:none;
+    color:white;
+    background-color:#616161;
+    opacity:0.8;
+    padding:5px 10px;
+    display:none;
+ }
+      </style>
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar">
 <div id="main-wrapper">
@@ -180,7 +194,49 @@
 
 </section>
 <!-- .section-education -->
-
+<section class="section-wrapper section-experience gray-bg RContainer">
+        <div class="container-fluid">
+            <div class="row Reveal">
+                <div class="col-md-12">
+                    <div class="section-title"><h2>Work Experience</h2></div>
+                </div>
+            </div>
+            <!--.row-->
+            <div class="row Reveal">
+                <div class="col-md-12">
+                    <div class="content-item">
+                            <small>May 2018 - Present</small>
+                            <h3>Joint Convenor</h3>
+                            <h4>Creative Computing Society</h4>
+        
+                            <p>Thapar Institute of Engineering and Technology, Patiala</p>
+                    </div>
+                    <div class="content-item">
+                            <small>October 2017 - February 2018</small>
+                            <h3>Designer and Technical Member</h3>
+                            <h4>Creative Computing Society</h4>
+        
+                            <p>Thapar Institute of Engineering and Technology, Patiala</p>
+                    </div>
+                    <div class="content-item">
+                        <small>July 2017</small>
+                        <h3>Team Leader(Virtual Internship)</h3>
+                        <h4>Laugh Out Loud Ventures</h4>
+                        <p>Navi Mumbai, India</p>
+                        <p><a href="./kashishintern.pdf">Certificate</a></p>
+                        
+                    </div>
+                    <!-- .experience-item -->
+                    
+                    <!-- .experience-item -->
+                </div>
+            </div>
+            <!--.row-->
+        </div>
+        <!-- .container-fluid -->
+    
+    </section>
+    
 <section class="section-wrapper section-interest gray-bg">
     <div class="container-fluid">
         <div class="row Reveal">
@@ -363,40 +419,6 @@
 </section>
 <!-- .skills-wrapper -->
 
-<section class="section-wrapper section-experience gray-bg RContainer">
-    <div class="container-fluid">
-        <div class="row Reveal">
-            <div class="col-md-12">
-                <div class="section-title"><h2>Work Experience</h2></div>
-            </div>
-        </div>
-        <!--.row-->
-        <div class="row Reveal">
-            <div class="col-md-12">
-                <div class="content-item">
-                    <small>July 2017</small>
-                    <h3>Team Leader(Virtual Internship)</h3>
-                    <h4>Laugh Out Loud Ventures</h4>
-                    <p>Navi Mumbai, India</p>
-                    <p><a href="./kashishintern.pdf">Certificate</a></p>
-                    
-                </div>
-                <!-- .experience-item -->
-                <div class="content-item">
-                    <small>October 2017 - February 2018</small>
-                    <h3>Designer and Technical Member</h3>
-                    <h4>Creative Computing Society</h4>
-
-                    <p>Thapar Institute of Engineering and Technology</p>
-                </div>
-                <!-- .experience-item -->
-            </div>
-        </div>
-        <!--.row-->
-    </div>
-    <!-- .container-fluid -->
-
-</section>
 
 <section class="section-contact section-wrapper gray-bg Reveal">
     <div class="container-fluid">
@@ -477,8 +499,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="copytext"><a
-                            href="#top">Go To Top</a></div>
+                    <div class="copytext goto-top">Go To Top</div>
                 </div>
             </div>
             <!--.row-->
@@ -506,11 +527,28 @@
 <script src="js/scripts.js"></script>
 <script src="js/scrollmagic/minified/ScrollMagic.min.js"></script>
 <script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <script>
     window.sr = ScrollReveal();
     sr.reveal('.Reveal');
+
+
+    $(document).ready(function () {
+  $(window).scroll(function () {
+    var top =  $(".goto-top");
+        if ( $('body').height() <= (    $(window).height() + $(window).scrollTop() + 200 )) {
+  top.animate({"margin-left": "0px"},1500);
+        } else {
+            top.animate({"margin-left": "-100%"},1500);
+        }
+    });
+
+    $(".goto-top").on('click', function () {
+        $("html, body").animate({scrollTop: 0}, 400);
+    });
+});
+
   </script>
 </body>
 </html>
