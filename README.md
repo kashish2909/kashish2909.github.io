@@ -1,3 +1,3 @@
 # [kashish2909.github.io](https://kashish2909.github.io/)
 Personal website.
-Hosted on githup pages.
+Hosted on github pages.
